@@ -1,12 +1,20 @@
 import React from "react";
+import { Text } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const rootNavigator = createNativeStackNavigator();
+type ScreenParams = {
+  StudentList: undefined;
+};
+
+const RootStack = createNativeStackNavigator<ScreenParams>();
 
 export const RootNavigator = () => {
   return (
-    <rootNavigator.Navigator>
-      <></>
-    </rootNavigator.Navigator>
+    <RootStack.Navigator>
+      <RootStack.Screen
+        name="StudentList"
+        component={() => null}
+      ></RootStack.Screen>
+    </RootStack.Navigator>
   );
 };
