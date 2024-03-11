@@ -5,7 +5,7 @@ import {
 } from "@react-navigation/native-stack";
 
 type ScreenParams = {
-  StudentList: undefined;
+  Classes: undefined;
 };
 
 const RootStack = createNativeStackNavigator<ScreenParams>();
@@ -13,13 +13,13 @@ const RootStack = createNativeStackNavigator<ScreenParams>();
 export const RootNavigator = () => {
   return (
     <RootStack.Navigator>
-      <RootStack.Screen name="StudentList" component={StudentListScreen} />
+      <RootStack.Screen name="Classes" component={ClassListScreen} />
     </RootStack.Navigator>
   );
 };
 
-const StudentListScreen = (
-  props: NativeStackScreenProps<ScreenParams, "StudentList">
+const ClassListScreen = (
+  props: NativeStackScreenProps<ScreenParams, "Classes">
 ) => {
   return null;
 };
